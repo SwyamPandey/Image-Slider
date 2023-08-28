@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(60deg, rgb(134, 134, 249), rgba(151, 151, 255, 0.166));
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: -60px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+    font-weight: 800;
+    text-decoration: underline;
+        }
+        .container {
+            height: 25rem;
+            overflow: hidden;
+            border-radius: 25px;
+            width: 45rem;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 8rem;
+        }
+
+        .slide {
+            display: flex;
+            width: 45rem;
+            /* height: 25rem;  */
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            border-radius: 15px;
+
+        }
+
+        .image {
+            width: 45rem;
+            /* height: 25rem; */
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: -100px;
+        }
+
+        .btn a {
+            background-color: rgb(199, 199, 199);
+            width: 1rem;
+            height: 1rem;
+            margin-left: 5px;
+            border-radius: 50%;
+            opacity: 75%;
+        }
+
+        .btn a:hover {
+            background-color: rgb(255, 255, 255);
+            transition-duration: 0.7s;
+        } 
+    </style>
+</head>
+
+<body>
+    <h1>Image Slider</h1>
+    <div class="container">
+        <div class="slide">
+            <img src="image-1.jpg" alt="Cannot Load Image" id="image-1" class="image">
+            <img src="image-2.jpg" alt="Cannot Load Image" id="image-2" class="image">
+            <img src="image-3.jpg" alt="Cannot Load Image" id="image-3" class="image">
+            <img src="image-4.jpg" alt="Cannot Load Image" id="image-4" class="image">
+        </div>
+        <div class="btn">
+            <a href="#image-1"></a>
+            <a href="#image-2"></a>
+            <a href="#image-3"></a>
+            <a href="#image-4"></a>
+        </div>
+    </div>
+</body>
+
+</html>
